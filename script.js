@@ -373,3 +373,10 @@ completedTask.onclick = function () {
 
 }
 
+
+window.addEventListener('load', function () {
+  setTimeout(function () {
+    // Hide the loading container
+    document.getElementById('loading-container').style.display = 'none';
+}, 2000); // Adjust the duration as needed
+});
