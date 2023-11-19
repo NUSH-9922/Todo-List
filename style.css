@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,700;1,700&family=Dela+Gothic+One&family=Poppins:ital,wght@0,500;0,600;1,400;1,500&family=Red+Hat+Display:wght@900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.4s linear ease;
+    -webkit-transition: all 0.4s linear ease;
+    -moz-transition: all 0.4s linear ease;
+    -ms-transition: all 0.4s linear ease;
+    -o-transition: all 0.4s linear ease;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 1.4rem;
+    text-rendering: optimizeLegibility;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    padding: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    padding: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    padding: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    padding: 20px;
+}
+
+.mein {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(219, 225, 225, 0.781);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Red Hat Display', sans-serif;
+    gap: 20px;
+}
+
+.toDoList-container {
+    width: 500px;
+    height: 500px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+
+}
+
+.toDoList-container .toDoList-container-row-1 {
+    width: 100%;
+    height: 70px;
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-inline: 10px;
+}
+
+.toDoList-container .toDoList-container-row-1 input {
+    width: 80%;
+    height: 100%;
+    text-indent: 50px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: 1px solid #2fc38d;
+    font-size: 15px;
+    opacity: .5;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+.toDoList-container .toDoList-container-row-1 input:hover {
+    border: 1px solid #04aa6d;
+}
+
+#toDoList-container-row-1-icon {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    
+}
+
+.toDoList-container .toDoList-container-row-1 button {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 20%;
+    height: 100%;
+    border: 1px solid #04aa6d;
+    cursor: pointer;
+    background-color: #04aa6d;
+    font-family: poppins;
+    color: #fff;
+    font-size: 15px;
+}
+
+.toDoList-container-row-2 {
+    width: 450px;
+    height: 50px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.toDoList-container-row-2 h3 {
+    cursor: pointer;
+    position: relative;
+
+}
+
+.toDoList-container-row-2-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    gap: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+
+}
+
+.toDoList-container-row-2-left-h3 {
+    position: relative;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+.toDoList-container-row-2-left-h3::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    display: block;
+    position: absolute;
+    top: 23px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+
+}
+
+
+.toDoList-container-row-2-left-h3.completed::after {
+    background-color: #f19be7;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+.toDoList-container-row-2-right h3 {
+    font-size: 12px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: linear-gradient(162deg, rgb(114, 174, 247) 10%, rgb(0, 102, 255) 100%);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.toDoList-container-row-3-container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    margin-top: 30px;
+    overflow-y: scroll;
+
+    
+}
+
+.backgroundImage{
+    background-image: url(/toDo-List-2/6256cce083e23/finance-insurance.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.toDoList-container-row-3-list-box {
+    width: 95%;
+    min-height: 15%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 15px;
+    border-radius: 5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius:5px;
+    box-shadow: 0 0px 7px rgba(0, 0, 0, 0.1);
+}
+
+.toDoList-container-row-3-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    gap: 10px;
+    
+}
+
+.toDoList-container-row-3-left input {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+.toDoList-container-row-3-left input[type=checkbox]:checked {
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    accent-color: #04aa6d;
+
+}
+
+.toDoList-container-row-3-left input:hover {
+    accent-color: rgb(170, 4, 4);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.toDoList-container-row-3-left h3 {
+    font-size: 15px;
+    font-family: poppins;
+    font-weight: 300;
+    word-break: break-all;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.edit-icon {
+    cursor: pointer;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+.edit-icon:hover {
+    font-size: 30px;
+
+}
+
+
+.edit-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #020c09c1;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+.edit-container-box {
+    width: 300px;
+    height: auto;
+    background-color: #f7f3f3;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all .3s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.edit-container-box-h1 {
+    text-shadow: 0px 0px 2px rgb(59, 53, 53);
+}
+
+.edit-container-box-inner-sec {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-container-box-inner-sec .row-1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.edit-container-box-inner-sec .row-1-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.edit-container-box-inner-sec .row-1-1 h5 {
+    font-family: roboto;
+    font-weight: 500;
+}
+
+.edit-container-box-inner-sec .row-1-1 {
+    cursor: pointer;
+}
+
+.edit-container-box-inner-sec .row-1 .row-1-2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 10px;
+
+}
+
+.edit-container-box-inner-sec .row-1 .row-1-2 input {
+    width: 80%;
+    height: 30px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    color: rgb(65, 57, 57);
+    border: 1px solid #04aa6d;
+    outline: none;
+    text-indent: 15px;
+    font-size: 12px;
+}
+
+.edit-container-box-inner-sec .row-1 .row-1-2 button {
+    width: 20%;
+    height: 30px;
+    border: 1px solid #04aa6d;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #04aa6d;
+    cursor: pointer;
+    color: #fff;
+}
+
+.row-2 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+}
+
+.row-2-top {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.row-2-top h5 {
+    font-family: roboto;
+    font-weight: 500;
+}
+
+.row-2-bottom {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    color: #ffff;
+    display: none; 
+}
+
+.row-2-bottom-left {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(221, 54, 54);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    cursor: pointer;
+}
+
+.row-2-bottom-right {
+    width: 50%;
+    height: 100%;
+    background-color: #04aa6d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .mein {
+        align-items: center;
+        justify-content: start;
+        padding-top: 30px;
+    }
+
+    .toDoList-container .toDoList-container-row-1 {
+        width: 70%;
+        height: 70px;
+        margin-top: 20px;
+        flex-shrink: 0;
+    }
+
+    .toDoList-container .toDoList-container-row-1 input {
+        width: 80%;
+        height: 70%;
+    }
+
+    .toDoList-container .toDoList-container-row-1 button {
+        width: 20%;
+        height: 70%;
+    }
+
+    .toDoList-container-row-2 {
+        width:  330px;
+        height: 50px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+    }
+
+    .toDoList-container-row-3-container {
+        width: 70%;
+        height: 80%;
+        align-items: center;
+        flex-shrink: 0;
+        margin-bottom: 100px;
+    }
+    .toDoList-container-row-3-list-box{
+        flex-shrink: 0;
+    }
+}
