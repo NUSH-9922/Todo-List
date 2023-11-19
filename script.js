@@ -231,7 +231,8 @@ function showEditBox() {
 
         setData();
         storDataInLocalStorage();
-        editBox.style.display = "none";
+       
+        resetEditboxAllitem();
       }
 
 
