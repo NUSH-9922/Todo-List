@@ -7,15 +7,6 @@ let taskData = []; // all task data stor in the from of array.
 let taskDone = []; // all check or done data index value stor in this array.
 
 // *************************************************** create read and delete ****************************************************************
-function showing() {
-  if (taskData.length === 0) {
-    document.querySelector(".toDoList-container-row-3-container").classList.add("backgroundImage");
-  }
-  else {
-    document.querySelector(".toDoList-container-row-3-container").classList.remove("backgroundImage");
-  }
-  console.log(taskData.length);
-}
 
 
 if (taskData.length === "") {
@@ -79,7 +70,7 @@ clearAllbtn.onclick = function () {
   setData();
   // Store the updated data in local storage
   storDataInLocalStorage();
-  showing();
+
 }
 
 
@@ -255,7 +246,7 @@ function deleteTask(i) {
     resetEditboxAllitem();
     setData();
     storDataInLocalStorage();
-    showing();
+
   }
   cancleTaskBtn.onclick = function () {
     resetEditboxAllitem();
@@ -299,7 +290,7 @@ allTaskListStatus[0].classList.add("completed");
 allTaskListStatus.forEach((taskListStatus, index) => {
   taskListStatus.addEventListener("click", function () {
     //reset classList if i click again 
-    showing()
+   
     removeLine();
     // Toggle a class to control styles
     allTaskListStatus[index].classList.add("completed");
@@ -329,7 +320,7 @@ let PendingTask = document.getElementById("pendingTask");
 PendingTask.onclick = function () {
   // Clear the container before adding pending tasks
   container.innerHTML = "";
-  showing();
+ ;
   // Iterate through the taskData array and add pending tasks to the container
   taskData.forEach((task, i) => {
     if (!taskDone.includes(i)) {
@@ -376,12 +367,6 @@ completedTask.onclick = function () {
 
 
   })
-
-  let checkboxes = document.querySelectorAll(".checkbox");
-  if (!checkboxes[0].checked) {
-    document.querySelector(".toDoList-container-row-3-container").classList.add("backgroundImage");
-  }
-
 
   checkMark();
   storDataInLocalStorage();
