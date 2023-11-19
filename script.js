@@ -378,7 +378,6 @@ completedTask.onclick = function () {
 
   let checkboxes = document.querySelectorAll(".checkbox");
   if (!checkboxes[0].checked) {
-    console.log(checkboxes[0]);
     document.querySelector(".toDoList-container-row-3-container").classList.add("backgroundImage");
   }
 
